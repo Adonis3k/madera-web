@@ -9,6 +9,7 @@ type ButtonProps = {
   children: ReactNode;
   variant?: "primary" | "secondary";
   external?: boolean;
+  className?: string;
 };
 
 // Hoisted to module scope — creating this inside the component would reset
@@ -18,7 +19,13 @@ const MotionLink = motion(Link);
 // Button hover/press spec — blueprint section 08:
 // hover: background shift + 1-2px lift, ease-out, 150ms
 // press: lift resets, background steps darker, linear, 80ms
-export function Button({ href, children, variant = "primary", external = false }: ButtonProps) {
+export function Button({
+  href,
+  children,
+  variant = "primary",
+  external = false,
+  className = "",
+}: ButtonProps) {
   const base =
     "inline-flex items-center gap-2 rounded-md px-5 py-3 font-body text-sm font-semibold";
 
@@ -32,7 +39,7 @@ export function Button({ href, children, variant = "primary", external = false }
       href={href}
       target={external ? "_blank" : undefined}
       rel={external ? "noopener" : undefined}
-      className={`${base} ${styles}`}
+      className={`${base} ${styles} ${className}`}
       whileHover={{ y: -2, transition: { duration: 0.15, ease: "easeOut" } }}
       whileTap={{ y: 0, scale: 0.99, transition: { duration: 0.08, ease: "linear" } }}
     >
