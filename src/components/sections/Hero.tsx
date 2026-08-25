@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/Button";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { StatusPulse } from "@/components/ui/StatusPulse";
-import { SignalMap } from "@/components/motion/SignalMap";
+import { BrandMark } from "@/components/motion/BrandMark";
 import { hero } from "@/content/hero";
 
 // Entry sequence — blueprint section 08:
@@ -80,7 +80,7 @@ export function Hero() {
           </motion.div>
         </div>
 
-        <SignalMap />
+        <BrandMark />
       </div>
     </section>
   );
