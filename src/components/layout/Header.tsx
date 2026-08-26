@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/Button";
+import { Wordmark } from "@/components/ui/Wordmark";
 import { nav } from "@/content/sections";
 
 // Sticky nav, always on the dark cover tokens regardless of what section is
@@ -18,13 +19,13 @@ export function Header() {
       <div className="mx-auto flex w-full max-w-[1080px] items-center justify-between gap-4 px-6 py-4">
         <Link
           href="/"
-          className="font-display text-base font-bold tracking-tight text-white"
+          className="inline-flex items-center gap-2 font-display text-base font-bold tracking-tight text-white"
         >
-          <span className="text-cover-accent">{nav.mark}</span>{" "}
+          <Wordmark className="text-cover-accent" />
           <span className="hidden sm:inline">{nav.name}</span>
         </Link>
 
-        <nav className="hidden items-center gap-6 sm:flex" aria-label="Primary">
+        <nav className="hidden items-center gap-6 md:flex" aria-label="Primary">
           {nav.links.map((link) => (
             <a
               key={link.href}

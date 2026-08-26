@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/Button";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { StatusPulse } from "@/components/ui/StatusPulse";
-import { BrandMark } from "@/components/motion/BrandMark";
 import { hero } from "@/content/hero";
 
 // Entry sequence — blueprint section 08:
@@ -23,7 +22,7 @@ export function Hero() {
             "radial-gradient(circle at 18% 20%, color-mix(in srgb, var(--cover-primary) 14%, transparent), transparent 40%), radial-gradient(circle at 82% 78%, color-mix(in srgb, var(--cover-accent) 12%, transparent), transparent 45%)",
         }}
       />
-      <div className="relative mx-auto grid w-full max-w-[1080px] grid-cols-1 items-center gap-12 px-6 py-24 sm:py-28 lg:grid-cols-[1.15fr_0.85fr] lg:gap-16">
+      <div className="relative mx-auto grid w-full max-w-[1080px] grid-cols-1 items-center gap-12 px-6 py-24 sm:py-28">
         <div>
           <Eyebrow className="text-cover-text-muted">{hero.eyebrow}</Eyebrow>
 
@@ -80,7 +79,10 @@ export function Hero() {
           </motion.div>
         </div>
 
-        <BrandMark />
+        {/* BrandMark hidden for now — to restore: re-add
+            `import { BrandMark } from "@/components/motion/BrandMark";`,
+            put back `lg:grid-cols-[1.15fr_0.85fr] lg:gap-16` on the grid
+            above, and render <BrandMark /> here. */}
       </div>
     </section>
   );

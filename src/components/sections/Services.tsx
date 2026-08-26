@@ -36,7 +36,7 @@ export function Services() {
             className="flex flex-col rounded-md border border-border bg-background p-6"
           >
             <div className="font-data text-[12px] font-semibold uppercase tracking-[0.14em] text-accent">
-              {tier.num} — {tier.name}
+              {tier.num} / {tier.name}
             </div>
             <h3 className="mt-3 font-display text-lg font-bold text-foreground">{tier.heading}</h3>
             <p className="mt-3 font-body text-sm text-muted">{tier.body}</p>

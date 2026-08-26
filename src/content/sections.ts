@@ -3,9 +3,16 @@
 // provenance rule as content/hero.ts: personal operating record, not yet
 // Madera Web Services client history.
 
+// Shared across the header CTA, the homepage Final CTA, and /schedule —
+// keep in sync with the CALENDLY_EMBED_URL customization params in
+// src/app/schedule/page.tsx if the base link ever changes.
+export const CALENDLY_URL = "https://calendly.com/adonis-maderaweb/30min";
+
+export const CONTACT_EMAIL = "Adonis@maderaweb.net";
+
 export const nav = {
   mark: "//MW",
-  name: "Madera Web",
+  name: "Web Servcices",
   links: [
     { label: "Services", href: "#services" },
     { label: "Proof", href: "#proof" },
@@ -17,10 +24,10 @@ export const nav = {
 // Beat 02 — objection: do they actually understand my risk?
 export const problem = {
   eyebrow: "The failure that doesn't show up until the audit does",
-  heading: "Nothing above shows up on a status page — until it does.",
+  heading: "Nothing above shows up on a status page. Until it does.",
   body: [
     "An unpatched instance nobody remembers spinning up. A failover that's never actually been tested. A vendor who goes quiet the week your compliance officer asks for documentation.",
-    "None of it shows up on a status page — it shows up in a due-diligence questionnaire, or an incident report, at the worst possible time. That's the risk being carried every day by a fund too lean to justify a full-time DevOps hire, or a practice running patient systems on whatever the last vendor left behind.",
+    "None of it shows up on a status page. It shows up in a due-diligence questionnaire, or an incident report, at the worst possible time. That's the risk being carried every day by a fund too lean to justify a full-time DevOps hire, or a practice running patient systems on whatever the last vendor left behind.",
   ],
 };
 
@@ -28,7 +35,7 @@ export const problem = {
 export const services = {
   eyebrow: "What exactly am I buying",
   heading: "Three ways to bring in enterprise infrastructure discipline, sized to what you need",
-  body: "Engagement model, not service category — for this buyer, how you commit matters more than a checklist of domains. A fund or a healthcare practice evaluating a vendor asks about scope, SLA, and exit terms before anything else.",
+  body: "Engagement model, not service category: for this buyer, how you commit matters more than a checklist of domains. A fund or a healthcare practice evaluating a vendor asks about scope, SLA, and exit terms before anything else.",
   tiers: [
     {
       num: "TIER 01",
@@ -40,13 +47,13 @@ export const services = {
       num: "TIER 02",
       name: "Project",
       heading: "Audit, harden, document, hand off",
-      body: "A fixed-scope engagement built around a specific deadline — a fundraise, an audit, a migration. Infrastructure hardening, disaster-recovery build-out, cloud migration, compliance documentation and SOPs, delivered on a set timeline with a clean handoff.",
+      body: "A fixed-scope engagement built around a specific deadline: a fundraise, an audit, a migration. Infrastructure hardening, disaster-recovery build-out, cloud migration, compliance documentation and SOPs, delivered on a set timeline with a clean handoff.",
     },
     {
       num: "TIER 03",
       name: "Advisory",
       heading: "A second set of eyes, before you commit to either",
-      body: "Architecture review, vendor and MSP evaluation, pre-audit readiness check — for teams not ready for an ongoing or project engagement yet, or who want an outside read before a bigger decision.",
+      body: "Architecture review, vendor and MSP evaluation, pre-audit readiness check. For teams not ready for an ongoing or project engagement yet, or who want an outside read before a bigger decision.",
     },
   ],
 };
@@ -57,12 +64,12 @@ export const verticals = {
   heading: "Proof, by vertical",
   items: [
     {
-      name: "For funds that can't have a bad night become a bad quarter",
-      body: "Currently responsible for production Linux and Windows infrastructure supporting hedge fund clients across AWS and Azure — 99.999% uptime, IAM and Azure RBAC hardened for least-privilege access, and automated AMI/EBS-snapshot disaster recovery built specifically to cut recovery time.",
+      name: "For business that require regulatory compliance and can't afford downtime",
+      body: "Currently responsible for production Linux and Windows infrastructure supporting medium to small business and hedge fund clients across AWS and Azure: 99.999% uptime, IAM and Azure RBAC hardened for least-privilege access, and automated AMI/EBS-snapshot disaster recovery built specifically to cut recovery time.",
     },
     {
       name: "For practices where downtime means a canceled visit, not a Slack message",
-      body: "Led facility operations for a multi-site healthcare organization — HIPAA, ADA, and OSHA compliance, MSP and vendor coordination, and IT upgrades executed with zero disruption to patient care.",
+      body: "Led facility operations for a multi-site healthcare organization: HIPAA, ADA, and OSHA compliance, MSP and vendor coordination, and IT upgrades executed with zero disruption to patient care.",
     },
   ],
 };
@@ -71,27 +78,26 @@ export const verticals = {
 export const approach = {
   eyebrow: "Can one person actually own this",
   heading: "One accountable engineer. Not a ticket number.",
-  body: "Every engagement runs on documented runbooks and incident-response procedures — not tribal knowledge held in one person's head — plus infrastructure as code, so the environment is reproducible without you. That discipline isn't new here: it's the same SOP-writing and system-monitoring process already built and run in production at a 365-day operation.",
+  body: "Every engagement runs on documented runbooks and incident-response procedures (not tribal knowledge held in one person's head) plus infrastructure as code, so the environment is reproducible without you. That discipline isn't new here: it's the same SOP-writing and system-monitoring process already built and run in production at a 365-day operation.",
 };
 
 // Beat 07 — objection: is the AI part just hype?
 export const aiForward = {
   eyebrow: "Is the AI part just hype",
   heading: "Where this is already heading",
-  body: "The same infrastructure discipline extends to the automated, AI-assisted workflows funds and practices are starting to ask about — reasoning, memory, and code execution, built on Amazon Bedrock and Claude. Not the reason to start this conversation. The reason it doesn't have to be the last one.",
+  body: "The same infrastructure discipline extends to the automated, AI-assisted workflows funds and practices are starting to ask about: reasoning, memory, and code execution, built on Amazon Bedrock and Claude. Not the reason to start this conversation. The reason it doesn't have to be the last one.",
 };
 
 // Beat 08 — final CTA. Primary button routes to the real /schedule page
-// (the Cal.com embed lives there) rather than an on-page anchor.
+// (the Calendly embed lives there) rather than an on-page anchor.
 export const finalCta = {
-  eyebrow: "Madera Web Services — Schedule",
-  headline: "One call. Twenty minutes. No deck.",
-  body: "A systems review, not a sales pitch — walk through what's running today, where the exposure actually is, and whether it's worth continuing the conversation. If it's not a fit, you'll know within twenty minutes, and you'll still have gotten something useful out of it.",
+  eyebrow: "Madera Web Services: Schedule",
+  headline: "One call. Thirty minutes.",
+  body: "A systems review, not a sales pitch: walk through what's running today, where the exposure actually is, and whether it's worth continuing the conversation. If it's not a fit, you'll know within twenty minutes, and you'll still have gotten something useful out of it.",
   primaryCta: { label: "Schedule a systems review", href: "/schedule" },
-  secondaryCta: { label: "Email instead", href: "mailto:adonisdmadera@gmail.com" },
   notSure: {
     eyebrow: "For the visitor who isn't sure yet",
-    body: "Not sure any of this is the right fit, or even what to call the problem? That's fine — nothing above requires diagnosing it first. A slow site, a climbing AWS bill, a vendor who's gone quiet, a nagging sense nobody's actually watching the infrastructure: say what's happening. “Email instead,” above, goes to the same inbox — this is just permission to use it before you're certain.",
+    body: `Not sure any of this is the right fit, or even what to call the problem? That's fine. Nothing above requires diagnosing it first. A slow site, a climbing AWS bill, a vendor who's gone quiet, a nagging sense nobody's actually watching the infrastructure: say what's happening at ${CONTACT_EMAIL}. This is just permission to use it before you're certain.`,
   },
 };
 
@@ -102,6 +108,6 @@ export const footer = {
     { label: "SYSTEM OPERATIONAL", value: "" },
     { label: "UPTIME", value: "99.999%" },
   ],
-  email: "adonisdmadera@gmail.com",
+  email: "adonis@maderaweb.net",
   copyright: `© ${new Date().getFullYear()} Madera Web Services`,
 };

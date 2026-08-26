@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Madera Web // MW logo mark
+  Vector-traced from source PNG (368x121) at brand navy #272595.
+  - Fixed lettering asset per brand-style-guide.md: never recolor into teal/green,
+    never reset in Roboto Mono, never stretch/skew/add effects.
+  - Reverse to white (#FFFFFF) on Ink Navy / dark surfaces.
+  - Minimum width: 96px digital / 1in print. Clear space on all sides = height of the "M".
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 368 121" role="img" aria-label="//MW">
+  <title>Madera Web</title>
+  <g id="mw-logo" fill="currentColor">
+    <g id="slashes">
+      <path id="slash-1" d="M61,8 L47,9 L12,113 L25,113 Z" />
+      <path id="slash-2" d="M95,8 L82,8 L47,113 L60,113 Z" />
+    </g>
+    <g id="wordmark">
+      <path id="letter-M" d="M107,9 L108,114 L129,113 L128,39 L155,113 L170,114 L198,37 L197,114 L218,114 L218,9 L190,9 L163,84 L136,10 Z" />
+      <path id="letter-W" d="M231,9 L254,113 L276,113 L293,45 L310,113 L332,114 L355,9 L334,9 L320,82 L302,9 L284,9 L267,81 L252,9 Z" />
+    </g>
+  </g>
+</svg>

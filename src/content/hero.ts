@@ -3,10 +3,10 @@
 // Madera Web Services client history — see the provenance rule, blueprint
 // section 04. Keep that attribution whenever this copy is edited.
 export const hero = {
-  eyebrow: "Madera Web Services — Cloud & DevOps",
+  eyebrow: "Madera Web Services: Cloud & DevOps",
   headline: "Enterprise uptime. Without the enterprise headcount.",
   subhead:
-    "Cloud infrastructure and compliance-literate DevOps for funds and healthcare practices — 99.999% uptime maintained in current infrastructure work, one accountable engineer instead of a ticket queue.",
+    "Cloud infrastructure and compliance experienced, DevOps for medium, small business, funds and healthcare practices. 99.999% uptime maintained in current infrastructure work, one accountable engineer instead of a ticket queue.",
   primaryCta: { label: "Schedule a systems review", href: "/schedule" },
   secondaryCta: { label: "See the track record", href: "#proof" },
   status: [
@@ -20,7 +20,7 @@ export const hero = {
 // attribution inline; never phrase these as Madera Web Services client
 // results until that history actually exists.
 export const proof = [
-  { num: "99.999%", label: "Uptime maintained — current role, hedge fund infrastructure" },
-  { num: "$230K+", label: "Saved annually — prior IT leadership role" },
-  { num: "Zero", label: "Patient-care disruptions — prior healthcare operations role" },
+  { num: "99.999%", label: "Uptime maintained, current role, hedge fund infrastructure" },
+  { num: "$230K+", label: "Saved annually, prior IT leadership role" },
+  { num: "Zero", label: "Patient-care disruptions, prior healthcare operations role" },
 ];

@@ -26,9 +26,17 @@ const LABEL = "font-data uppercase tracking-[0.08em]";
 
 function useSignalTravel(from: [number, number], to: [number, number]) {
   return {
-    cx: [from[0], from[0], to[0], to[0], from[0]],
-    cy: [from[1], from[1], to[1], to[1], from[1]],
-    opacity: [0, 1, 1, 0, 0],
+    // Framer Motion claims cx/cy once they appear in `animate` and manages
+    // them as its own motion values from then on — a plain cx/cy prop on
+    // the element gets overwritten (as "undefined") rather than used as
+    // the starting point, so the first keyframe has to be passed via
+    // `initial` for the circle to have a valid position before it animates.
+    initial: { cx: from[0], cy: from[1], opacity: 0 },
+    animate: {
+      cx: [from[0], from[0], to[0], to[0], from[0]],
+      cy: [from[1], from[1], to[1], to[1], from[1]],
+      opacity: [0, 1, 1, 0, 0],
+    },
   };
 }
 
@@ -42,7 +50,7 @@ export function SignalMap() {
       <svg
         viewBox="0 0 300 220"
         role="img"
-        aria-label="Infrastructure topology diagram: a firewall, load balancer, and NAT gateway at the edge; three app servers with an active origin instance; a primary database with a read replica and backup snapshot — all inside a VPC with a NACL-guarded private subnet"
+        aria-label="Infrastructure topology diagram: a firewall, load balancer, and NAT gateway at the edge; three app servers with an active origin instance; a primary database with a read replica and backup snapshot, all inside a VPC with a NACL-guarded private subnet"
         className="hidden sm:block w-full h-auto overflow-visible"
       >
         {/* Boundaries */}
@@ -113,7 +121,8 @@ export function SignalMap() {
         <motion.circle
           r={4}
           fill="var(--cover-accent)"
-          animate={desktopTravel}
+          initial={desktopTravel.initial}
+          animate={desktopTravel.animate}
           transition={{ duration: 7, ease: "easeInOut", repeat: Infinity, times: travelTimes }}
         />
 
@@ -161,7 +170,8 @@ export function SignalMap() {
         <motion.circle
           r={4}
           fill="var(--cover-accent)"
-          animate={mobileTravel}
+          initial={mobileTravel.initial}
+          animate={mobileTravel.animate}
           transition={{ duration: 7, ease: "easeInOut", repeat: Infinity, times: travelTimes }}
         />
         <g fill="var(--cover-text-muted)" fontSize={7}>

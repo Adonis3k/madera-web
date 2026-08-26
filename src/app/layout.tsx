@@ -30,9 +30,9 @@ const plexMono = IBM_Plex_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Madera Web Services — Enterprise uptime, without the enterprise headcount",
+  title: "Madera Web Services | Enterprise uptime, without the enterprise headcount",
   description:
-    "Cloud infrastructure and compliance-literate DevOps for funds and healthcare practices — 99.999% uptime maintained in current infrastructure work, one accountable engineer instead of a ticket queue.",
+    "Cloud infrastructure and compliance experienced, DevOps for funds and healthcare practices. 99.999% uptime maintained in current infrastructure work, one accountable engineer instead of a ticket queue.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

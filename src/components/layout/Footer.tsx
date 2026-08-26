@@ -1,5 +1,6 @@
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { StatusPulse } from "@/components/ui/StatusPulse";
+import { Wordmark } from "@/components/ui/Wordmark";
 import { nav, footer } from "@/content/sections";
 
 // Blueprint section 06, signature detail: the same live-feeling status line
@@ -25,8 +26,9 @@ export function Footer() {
 
         <div className="mt-8 flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
           <div>
-            <div className="font-display text-sm font-bold text-white">
-              <span className="text-cover-accent">{nav.mark}</span> {nav.name}
+            <div className="inline-flex items-center gap-2 font-display text-sm font-bold text-white">
+              <Wordmark className="text-cover-accent" />
+              <span>{nav.name}</span>
             </div>
             <Eyebrow className="mt-2 text-cover-text-muted">{footer.copyright}</Eyebrow>
           </div>

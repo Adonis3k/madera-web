@@ -4,14 +4,14 @@ import { motion } from "framer-motion";
 import { Container } from "@/components/ui/Container";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Button } from "@/components/ui/Button";
-import { finalCta } from "@/content/sections";
+import { finalCta, CONTACT_EMAIL } from "@/content/sections";
 
 const EASE = [0.16, 1, 0.3, 1] as const;
 
 // Blueprint section 07, beat 08 — closes the page the same way the hero
 // opened it, on purpose (same dark cover ground, same headline register).
 // The primary button routes to /schedule — that page holds the actual
-// Cal.com embed — rather than duplicating it here.
+// Calendly embed — rather than duplicating it here.
 export function FinalCta() {
   return (
     <section className="bg-cover-bg py-20 sm:py-28">
@@ -30,14 +30,17 @@ export function FinalCta() {
             {finalCta.body}
           </p>
 
-          <div className="mt-8 flex flex-wrap justify-center gap-3">
+          <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
             <Button href={finalCta.primaryCta.href} variant="primary">
               {finalCta.primaryCta.label}
             </Button>
-            <Button href={finalCta.secondaryCta.href} variant="secondary">
-              {finalCta.secondaryCta.label}
-            </Button>
           </div>
+          <p className="mt-4 font-body text-sm text-cover-text-muted">
+            Or email{" "}
+            <a href={`mailto:${CONTACT_EMAIL}`} className="text-cover-text underline hover:text-white">
+              {CONTACT_EMAIL}
+            </a>
+          </p>
         </motion.div>
 
         <motion.div

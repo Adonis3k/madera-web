@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { Wordmark } from "@/components/ui/Wordmark";
 
 const EASE = [0.16, 1, 0.3, 1] as const;
 
@@ -26,10 +27,10 @@ export function BrandMark() {
       />
       <div className="relative text-center">
         <div className="font-display text-6xl font-bold tracking-tight text-cover-accent sm:text-7xl">
-          {"//MW"}
+          <Wordmark />
         </div>
-        <div className="mt-3 font-display text-base font-semibold uppercase tracking-[0.35em] text-white">
-          Madera Web
+        <div className="mt-3 font-data text-sm font-medium tracking-[0.25em] text-white sm:text-base">
+          madera web services
         </div>
       </div>
     </motion.div>

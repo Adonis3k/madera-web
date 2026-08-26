@@ -20,7 +20,7 @@ export function ProofStrip() {
       <div className="mx-auto w-full max-w-[920px] px-6">
         <Eyebrow className="text-muted">The numbers, plainly</Eyebrow>
         <p className="mt-2 max-w-[60ch] font-body text-sm text-muted">
-          Not projections, and not yet Madera Web Services client results — the operating record
+          Not projections, and not yet Madera Web Services client results: the operating record
           behind those results, run in production, in the roles that built it.
         </p>
 
