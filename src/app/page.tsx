@@ -1,5 +1,6 @@
 import { Hero } from "@/components/sections/Hero";
 import { ProofStrip } from "@/components/sections/ProofStrip";
+import { Method } from "@/components/sections/Method";
 import { Problem } from "@/components/sections/Problem";
 import { Services } from "@/components/sections/Services";
 import { ProofVerticals } from "@/components/sections/ProofVerticals";
@@ -14,6 +15,7 @@ export default function Home() {
     <>
       <Hero />
       <ProofStrip />
+      <Method />
       <Problem />
       <Services />
       <ProofVerticals />

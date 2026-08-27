@@ -12,7 +12,7 @@ export const CONTACT_EMAIL = "Adonis@maderaweb.net";
 
 export const nav = {
   mark: "//MW",
-  name: "Web Servcices",
+  name: "Web Services",
   links: [
     { label: "Services", href: "#services" },
     { label: "Proof", href: "#proof" },
@@ -29,6 +29,51 @@ export const problem = {
     "An unpatched instance nobody remembers spinning up. A failover that's never actually been tested. A vendor who goes quiet the week your compliance officer asks for documentation.",
     "None of it shows up on a status page. It shows up in a due-diligence questionnaire, or an incident report, at the worst possible time. That's the risk being carried every day by a fund too lean to justify a full-time DevOps hire, or a practice running patient systems on whatever the last vendor left behind.",
   ],
+};
+
+// Beat 03.5 — the operating model, stated once. Sits directly under the
+// proof numbers: the record above is the "why trust this", A.D.A.P.T. is
+// the "how every engagement actually runs". Five phases, same order every
+// time; the four disciplines below run through all of them.
+export const method = {
+  eyebrow: "The Madera Method",
+  acronym: "A.D.A.P.T.",
+  tagline: "A disciplined approach to building and operating secure cloud infrastructure.",
+  body: "Every engagement follows the same operating model: align the business need, design the right architecture, automate what should be repeatable, prove it works, then transition it into an environment that can be operated and improved.",
+  phases: [
+    {
+      letter: "A",
+      name: "Align",
+      lead: "Start with the outcome.",
+      body: "Requirements, stakeholders, constraints, risk and what success actually means.",
+    },
+    {
+      letter: "D",
+      name: "Design",
+      lead: "Engineer before deploying.",
+      body: "Architecture, security, resilience, recovery, cost and operational requirements.",
+    },
+    {
+      letter: "A",
+      name: "Automate",
+      lead: "Make it reproducible.",
+      body: "Infrastructure as code, version control, CI/CD and AI-assisted workflows where they add value.",
+    },
+    {
+      letter: "P",
+      name: "Prove",
+      lead: "Trust evidence, not assumptions.",
+      body: "Validate security, monitoring, backups, recovery, performance and expected behavior.",
+    },
+    {
+      letter: "T",
+      name: "Transition",
+      lead: "Leave it operable.",
+      body: "Documentation, runbooks, ownership, monitoring and a clear path for continuous improvement.",
+    },
+  ],
+  disciplines: ["Security", "Observability", "Resilience", "Cost control"],
+  disciplinesNote: "Built into every phase.",
 };
 
 // Beat 04 — objection: what exactly am I buying?
