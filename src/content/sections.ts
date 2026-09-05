@@ -119,11 +119,14 @@ export const verticals = {
   ],
 };
 
-// Beat 06 — objection: can one person actually own this?
+// Beat 06 — originally the "can one person actually own this" objection;
+// repositioned (2026-09) around the real Secure AI Deployment topology
+// diagram as evidence, rather than the abstract labeled-infrastructure
+// sketch this section used to carry.
 export const approach = {
-  eyebrow: "Can one person actually own this",
-  heading: "One accountable engineer. Not a ticket number.",
-  body: "Every engagement runs on documented runbooks and incident-response procedures (not tribal knowledge held in one person's head) plus infrastructure as code, so the environment is reproducible without you. That discipline isn't new here: it's the same SOP-writing and system-monitoring process already built and run in production at a 365-day operation.",
+  eyebrow: "Architecture, Security & Cost Model",
+  heading: "How the System Works and What It Costs",
+  body: "An AI application built with AWS CDK, ECS Fargate, PrivateLink, guardrails, multi-AZ networking, automated deployment and detailed cost analysis.",
 };
 
 // Beat 07 — objection: is the AI part just hype?
